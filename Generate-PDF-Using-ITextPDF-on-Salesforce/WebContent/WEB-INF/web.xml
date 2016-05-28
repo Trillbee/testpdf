@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<context-param>
+         <param-name>salesforce.consumerKey</param-name>
+         <param-value>3MVG9e2mBbZnmM6kneN4FRbVcNsMqchdgCsf0.mN81cWr6FROApyGQ06nuRLMSJs.Zr11neluWvbvF.cB_REH
+</param-value>
+    </context-param>
+	<context-param>
+         <param-name>salesforce.consumerSecret</param-name>
+         <param-value>8269370568664990005</param-value>
+    </context-param>
+	<context-param>
+         <param-name>salesforce.username</param-name>
+         <param-value></param-value>
+    </context-param>
+	<context-param>
+         <param-name>salesforce.password</param-name>
+         <param-value></param-value>
+    </context-param>
+	<context-param>
+         <param-name>salesforce.securityToken</param-name>
+         <param-value></param-value>
+    </context-param>
+	<servlet>
+		<servlet-name>PDFMerge</servlet-name>
+		<servlet-class>com.sfdc.pdfmerge.sample.PDFMergeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>TestOAuth</servlet-name>
+		<servlet-class>com.sfdc.pdfmerge.sample.StartServet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		Test OAuth Demo</description>
+		<display-name>StartServet</display-name>
+		<servlet-name>StartServet</servlet-name>
+		<servlet-class>com.sfdc.pdfmerge.sample.StartServet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		Demo Servlet to fetch Account</description>
+		<display-name>DemoREST</display-name>
+		<servlet-name>DemoREST</servlet-name>
+		<servlet-class>com.sfdc.pdfmerge.sample.DemoREST</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>TestIFrame</display-name>
+		<servlet-name>TestIFrame</servlet-name>
+		<servlet-class>com.sfdc.pdfmerge.sample.TestIFrame</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PDFMerge</servlet-name>
+		<url-pattern>/pdfmerge</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>StartServet</servlet-name>
+		<url-pattern>/StartServet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DemoREST</servlet-name>
+		<url-pattern>/DemoREST</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TestIFrame</servlet-name>
+		<url-pattern>/TestIFrame</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TestOAuth</servlet-name>
+		<url-pattern>/TestOAuth</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
